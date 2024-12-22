@@ -1,10 +1,10 @@
 import React from "react";
-import "./NewsPanel.css";
+import "./NewsPanel.scss";
 
 export const NewsPanel = () => {
   return (
-    <div id="templatemo_news_panel">
-      <div id="templatemo_news_section">
+    <div className="news-panel">
+      <div className="news-section">
         <ul>
           <li>
             <a href="#">Temple News:</a>
@@ -12,7 +12,7 @@ export const NewsPanel = () => {
         </ul>
       </div>
 
-      <div id="templatemo_textupd_section">
+      <div className="text-update-section">
         <ul>
           <li>
             <a href="#">
@@ -20,7 +20,7 @@ export const NewsPanel = () => {
               Building and Gaushala in the premises of Temple. Devotees can
               donate their offerings to take part in this support. Temple has a
               requirement of Panchaloha Nandi Idol and Palaki for the purpose of
-              Kashi Vishwanath Swamy Seva on the aspicious occasion of Kalyana
+              Kashi Vishwanath Swamy Seva on the auspicious occasion of Kalyana
               Mahotsavam. Devotees can take part in donating the requirement.
             </a>
           </li>

@@ -1,18 +1,19 @@
-import "./OurPrograms.css";
+import React from "react";
+import "./OurPrograms.scss";
 
 export const OurPrograms = () => {
   return (
-    <div id="templatemo_ourprograms_panel">
-      <div id="templatemo_ourprograms_section">
+    <div className="our-programs">
+      <div className="our-programs__section">
         <ul>
           <li>
             <a href="javascript:void(0)">Our Programs</a>
           </li>
         </ul>
       </div>
-      <div id="templatemo_kas">
-        <div id="templatemo_ourprogs_k_panel">
-          <div id="templatemo_ourprogs_k_section">
+      <div className="our-programs__list">
+        <div className="program-item">
+          <div className="program-item__section">
             <ul>
               <li>
                 <a href="javascript:void(0)">Kalyanotsavam</a>
@@ -21,8 +22,8 @@ export const OurPrograms = () => {
           </div>
         </div>
 
-        <div id="templatemo_ourprogs_k_panel">
-          <div id="templatemo_ourprogs_k_section">
+        <div className="program-item">
+          <div className="program-item__section">
             <ul>
               <li>
                 <a href="javascript:void(0)">Maha Shivratri</a>
@@ -31,8 +32,8 @@ export const OurPrograms = () => {
           </div>
         </div>
 
-        <div id="templatemo_ourprogs_k_panel">
-          <div id="templatemo_ourprogs_k_section">
+        <div className="program-item">
+          <div className="program-item__section">
             <ul>
               <li>
                 <a href="javascript:void(0)">Annapurna Jayanthi</a>

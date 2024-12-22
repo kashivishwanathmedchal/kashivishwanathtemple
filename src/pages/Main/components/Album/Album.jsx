@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import pic1Large from "./assets/Pic1-large.jpg";
 import pic1Small from "./assets/Pic1-small.jpg";
 import pic2Large from "./assets/Pic2-large.jpg";
@@ -18,125 +19,49 @@ import pic9Large from "./assets/Pic9-large.jpg";
 import pic9Small from "./assets/Pic9-small.jpg";
 import pic10Large from "./assets/Pic10-large.jpg";
 import pic10Small from "./assets/Pic10-small.jpg";
-
-import { useNavigate } from "react-router-dom";
-
-import "./Album.css";
+import "./Album.scss";
 
 export const Album = () => {
   const navigate = useNavigate();
-
   const isViewMore = !window.location.href.includes("gallery");
 
   const handleViewMoreClick = () => {
     navigate("/gallery");
   };
+
   return (
-    <>
-      <div id="templatemo_Album_panel">
-        <div id="templatemo_Album_section">
-          <ul>
-            <li>
-              <a href="javascript:void(0)">Photo Gallery</a>
-            </li>
-          </ul>
-        </div>
+    <div className="album-component">
+      <div className="album-header">
+        <ul>
+          <li>
+            <a href="#">Photo Gallery</a>
+          </li>
+        </ul>
       </div>
-      <div id="Album_Photos">
-        <div class="Album_pic">
-          <a
-            href={pic1Large}
-            data-lightbox="my_gall"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={pic1Small} alt="pic1Small" />
-          </a>
-          <a
-            href={pic2Large}
-            data-lightbox="my_gall"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={pic2Small} alt="pic2Small" />
-          </a>
-          <a
-            href={pic3Large}
-            data-lightbox="my_gall"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={pic3Small} alt="pic3Small" />
-          </a>
-          <a
-            href={pic4Large}
-            data-lightbox="my_gall"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={pic4Small} alt="pic4Small" />
-          </a>
-          <a
-            href={pic5Large}
-            data-lightbox="my_gall"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={pic5Small} alt="pic5Small" />
-          </a>
-          <a
-            href={pic6Large}
-            data-lightbox="my_gall"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={pic6Small} alt="pic6Small" />
-          </a>
-          <a
-            href={pic7Large}
-            data-lightbox="my_gall"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={pic7Small} alt="pic7Small" />
-          </a>
-          <a
-            href={pic8Large}
-            data-lightbox="my_gall"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={pic8Small} alt="pic8Small" />
-          </a>
-          <a
-            href={pic9Large}
-            data-lightbox="my_gall"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={pic9Small} alt="pic9Small" />
-          </a>
-          <a
-            href={pic10Large}
-            data-lightbox="my_gall"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={pic10Small} alt="pic10Small" />
-          </a>
+      <div className="album-photos">
+        <div className="photo-grid">
+          {[{ large: pic1Large, small: pic1Small }, { large: pic2Large, small: pic2Small }, { large: pic3Large, small: pic3Small }, { large: pic4Large, small: pic4Small }, { large: pic5Large, small: pic5Small }, { large: pic6Large, small: pic6Small }, { large: pic7Large, small: pic7Small }, { large: pic8Large, small: pic8Small }, { large: pic9Large, small: pic9Small }, { large: pic10Large, small: pic10Small }].map((pic, index) => (
+            <a
+              key={index}
+              href={pic.large}
+              data-lightbox="my_gall"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={pic.small} alt={`pic${index + 1}`} />
+            </a>
+          ))}
         </div>
       </div>
       {isViewMore && (
-        <div id="templatemo_vmore_panel" onClick={handleViewMoreClick}>
-          <div id="templatemo_vmore_section">
-            <ul>
-              <li>
-                <a href="javascript:void(0)">View More</a>
-              </li>
-            </ul>
-          </div>
+        <div className="view-more" onClick={handleViewMoreClick}>
+          <ul>
+            <li>
+              <a href="#">View More</a>
+            </li>
+          </ul>
         </div>
       )}
-    </>
+    </div>
   );
 };

@@ -1,0 +1,10 @@
+.banner-component {
+  position: relative;
+  width: 100%;
+  margin-top: 10px; // Updated from top to margin for better layout control
+
+  .banner-image {
+    position: relative;
+    width: 100%;
+  }
+}

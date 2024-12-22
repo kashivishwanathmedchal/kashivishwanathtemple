@@ -1,0 +1,39 @@
+// Base styles for the OurProgramsSlider component
+.our-programs-slider {
+  margin-top: 25px;
+}
+
+.our-programs-slider__content {
+  display: flex;
+  justify-content: center;
+}
+
+.our-programs-slider__images {
+  display: flex;
+  gap: 20px;
+}
+
+.slider-image {
+  width: 350px;
+  height: 400px;
+  object-fit: cover;
+}
+
+// Responsive styles for smaller screens
+@media (max-width: 768px) {
+  .slider-image {
+    width: 250px;
+    height: 280px;
+  }
+
+  .our-programs-slider__images {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-image {
+    width: 200px;
+    height: 230px;
+  }
+}

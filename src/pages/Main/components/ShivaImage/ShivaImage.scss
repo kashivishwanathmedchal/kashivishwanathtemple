@@ -1,0 +1,44 @@
+// Base styles for ShivaImage component
+.shiva-template {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 60px;
+  gap: 20px; // Optional: Adds space between the two images
+}
+
+.shiva-template__image-container {
+  flex: 1; // Makes the containers take up equal space
+  display: flex;
+  justify-content: center;
+}
+
+.shiva-template__image {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover; // Ensures images fit without distortion
+}
+
+// Responsive styles for smaller screens
+@media (max-width: 768px) {
+  .shiva-template {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .shiva-template__image-container {
+    width: 80%; // Limits the image container width
+    margin-bottom: 20px; // Adds space between images
+  }
+
+  .shiva-template__image {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .shiva-template__image-container {
+    width: 90%; // Further limits the image container width
+  }
+}

@@ -5,7 +5,7 @@ import slider3 from "./assets/slider_3.png";
 import slider4 from "./assets/slider_4.png";
 import slider8 from "./assets/slider_8.png";
 
-import "./ContentSlider.css";
+import "./ContentSlider.scss";
 
 export const ContentSlider = () => {
   const [hoverElement, setHoverElement] = useState(0);
@@ -19,32 +19,32 @@ export const ContentSlider = () => {
   };
 
   return (
-    <div id="templatemo_content_slider">
-      <div class="templatemo_slider_section">
+    <div className="content-slider">
+      <div className="content-slider__section">
         <img
           src={hoverElement === 1 ? slider8 : slider1}
-          id="slider"
+          className="content-slider__image"
           alt="slider1"
           onMouseEnter={() => handleMouseEnter(1)}
           onMouseLeave={handleMouseLeave}
         />
         <img
           src={hoverElement === 2 ? slider8 : slider2}
-          id="slider2"
+          className="content-slider__image"
           alt="slider2"
           onMouseEnter={() => handleMouseEnter(2)}
           onMouseLeave={handleMouseLeave}
         />
         <img
           src={hoverElement === 3 ? slider8 : slider3}
-          id="slider3"
+          className="content-slider__image"
           alt="slider3"
           onMouseEnter={() => handleMouseEnter(3)}
           onMouseLeave={handleMouseLeave}
         />
         <img
           src={hoverElement === 4 ? slider8 : slider4}
-          id="slider4"
+          className="content-slider__image"
           alt="slider4"
           onMouseEnter={() => handleMouseEnter(4)}
           onMouseLeave={handleMouseLeave}

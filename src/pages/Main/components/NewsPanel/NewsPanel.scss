@@ -1,0 +1,88 @@
+// Base styles for NewsPanel component
+.news-panel {
+  position: relative;
+  height: 25px;
+  background: url(./assets/templatemo_menu_bg.gif) repeat-x;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.news-section {
+  width: 105px;
+}
+
+.news-section ul {
+  margin: 0;
+  padding-left: 20px;
+  padding-top: 4px;
+  list-style: none;
+}
+
+.text-update-section {
+  width: calc(100% - 105px);
+  overflow: hidden;
+}
+
+.text-update-section ul {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.news-section ul li a {
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
+  border-bottom: 3px solid #472400;
+}
+
+.text-update-section ul li a {
+  display: flex;
+  white-space: nowrap;
+  padding: 0;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
+  word-spacing: 1px;
+  transform: translateX(100%);
+  animation: moving 50s linear infinite;
+}
+
+@keyframes moving {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+// Responsive Design for smaller screens
+@media (max-width: 768px) {
+  .news-panel {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .news-section {
+    width: 100%;
+    text-align: center;
+  }
+
+  .text-update-section {
+    width: 100%;
+  }
+
+  .text-update-section ul li a {
+    font-size: 10px;
+    padding: 10px;
+  }
+}

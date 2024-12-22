@@ -1,11 +1,11 @@
 import React from "react";
-import "./Footer.css";
+import "./Footer.scss";
 
 export const Footer = () => {
   return (
-    <div id="templatemo_bottom_panel">
-      <div id="templatemo_bottom_section">
-        <div class="templatemo_bottom_section_content">
+    <div className="bottom-panel">
+      <div className="bottom-section">
+        <div className="bottom-section-content">
           <h3>Temple Address</h3>
           <ul>
             <li>
@@ -18,7 +18,7 @@ export const Footer = () => {
           </ul>
         </div>
 
-        <div class="templatemo_bottom_section_content">
+        <div className="bottom-section-content">
           <h3>Email</h3>
           <ul>
             <li>
@@ -30,7 +30,7 @@ export const Footer = () => {
           </ul>
         </div>
 
-        <div class="templatemo_bottom_section_content">
+        <div className="bottom-section-content">
           <h3>Contact</h3>
           <ul>
             <li>

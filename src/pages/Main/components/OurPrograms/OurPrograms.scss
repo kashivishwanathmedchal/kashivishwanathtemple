@@ -1,0 +1,110 @@
+// Base styles for the OurPrograms component
+.our-programs {
+  margin: auto;
+  color: #dbc1a7;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  margin-top: 60px;
+}
+
+// Main section with the 'Our Programs' link
+.our-programs__section {
+  background: url(./assets/templatemo_menu_bg.gif);
+  width: 33%;
+  align-self: center;
+
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    text-align: center;
+  }
+
+  a {
+    color: #dbc1a7;
+    font-size: 35px;
+    text-decoration: none;
+  }
+}
+
+// List container for individual program items
+.our-programs__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+// Reusable styles for each program item
+.program-item {
+  width: 25%;
+  color: #ffffff;
+
+  &__section {
+    background: url(./assets/templatemo_menu_bg.gif);
+    height: 50px;
+
+    ul {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+    }
+
+    li {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    a {
+      color: #dbc1a7;
+      text-decoration: none;
+      font-size: 20px;
+    }
+  }
+}
+
+// Responsive styles for smaller screens
+@media (max-width: 768px) {
+  .our-programs__section {
+    width: 100%;
+    text-align: center;
+  }
+
+  .our-programs__list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .program-item {
+    width: 80%;
+    margin-bottom: 15px;
+  }
+
+  .program-item__section {
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .program-item {
+    width: 100%;
+  }
+
+  .program-item__section {
+    height: 40px;
+  }
+
+  .our-programs__section a {
+    font-size: 30px;
+  }
+
+  .program-item__section a {
+    font-size: 18px;
+  }
+}

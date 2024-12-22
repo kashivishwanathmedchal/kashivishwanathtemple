@@ -1,16 +1,20 @@
 import shiva from "./assets/Shiva.png";
 import aboutTemple from "./assets/about _temple.jpg";
 
-import "./ShivaImage.css";
+import "./ShivaImage.scss";
 
 export const ShivaImage = () => {
   return (
-    <div class="shiva-template">
-      <div id="templatemo_shiva">
-        <img src={shiva} id="Shiva" alt="shiva" />
+    <div className="shiva-template">
+      <div className="shiva-template__image-container">
+        <img src={shiva} className="shiva-template__image" alt="Shiva" />
       </div>
-      <div id="abt_tpl">
-        <img src={aboutTemple} id="abttpl" alt="about-temple" />
+      <div className="shiva-template__image-container">
+        <img
+          src={aboutTemple}
+          className="shiva-template__image"
+          alt="About Temple"
+        />
       </div>
     </div>
   );

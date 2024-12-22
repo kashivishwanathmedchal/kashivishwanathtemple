@@ -4,6 +4,11 @@
   background-color: #0c0600;
   color: #dbc1a7;
   height: 205px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 #logo {
@@ -11,15 +16,17 @@
   height: 220px;
   margin-top: -182px;
   position: relative;
+  max-width: 100%;  /* Ensures logo scales with the container */
+  display: none;
 }
 
-#flag {
+#flag, #rod, #rod2, #Lingam {
   width: 32px;
   height: 32px;
   margin-top: -180px;
   vertical-align: middle;
-  margin: -406px 0px 10px -125px;
   position: relative;
+  display: none;
 }
 
 #rod {
@@ -29,6 +36,8 @@
   vertical-align: middle;
   margin: -380px 0px 10px -47px;
   position: relative;
+  display: none;
+
 }
 
 #rod2 {
@@ -38,6 +47,8 @@
   vertical-align: middle;
   margin: -380px 0px -70px -29px;
   position: relative;
+  display: none;
+
 }
 
 #Lingam {
@@ -47,13 +58,64 @@
   right: 0;
   top: 43px;
   width: auto;
+  display: none;
+
 }
 
 #templatemo_header_panel #templatemo_title_section {
-  width: 960px;
+  width: 100%;
   height: 132px; /* +73 ( padding ) */
   margin: 0 auto;
   padding-top: 73px;
   background: url(./assets/templatemo_title_bg.jpg) center top no-repeat;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  #templatemo_header_panel {
+    height: auto; /* Remove fixed height for smaller screens */
+    padding: 20px 0;
+  }
+
+  #logo {
+    width: 150px;  /* Smaller logo */
+    height: 150px;
+    display: none;
+  }
+
+  #templatemo_title_section {
+    width: 90%;  /* Adjust width for smaller screens */
+    padding-top: 50px;
+  }
+
+  #flag, #rod, #rod2 {
+    display: inline-block; /* Display these elements on smaller screens */
+    margin-top: 10px;
+    display: none;
+  }
+
+  #Lingam {
+    width: 150px; /* Resize Lingam for small screens */
+    height: 150px;
+    display: none;
+  }
+
+  /* For devices smaller than 480px (mobile devices), stack the elements vertically */
+  @media (max-width: 480px) {
+    #logo {
+      width: 120px;  /* Even smaller logo */
+      height: 120px;
+      display: none;
+    }
+
+    #Lingam {
+      width: 120px; /* Resize Lingam further for smaller screens */
+      height: 120px;
+      display: none;
+    }
+
+    #templatemo_title_section {
+      padding-top: 30px;
+    }
+  }
 }
